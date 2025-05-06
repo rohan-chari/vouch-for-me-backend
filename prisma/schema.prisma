@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "../src/generated/prisma"
@@ -19,3 +13,30 @@ model WaitListUser {
   email     String   @unique
   createdAt DateTime @default(now())
 }
+
+model EmailVerificationToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  email     String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+
+/*
+📌 Prisma Migration Workflow — Add New Models Later
+
+1️⃣ Update schema.prisma
+   - Add new model(s) or modify existing ones
+
+2️⃣ Create a migration:
+    npx prisma migrate dev --name meaningful_migration_name
+
+3️⃣ Deploy the migration (for production or remote DBs):
+    npx prisma migrate deploy
+
+Optional:
+- Use `npx prisma studio` to view/edit data visually
+- Use `npx prisma generate` if using the client in a custom path
+
+*/

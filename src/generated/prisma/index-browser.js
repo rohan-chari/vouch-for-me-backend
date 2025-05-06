@@ -126,6 +126,14 @@ exports.Prisma.WaitListUserScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.EmailVerificationTokenScalarFieldEnum = {
+  id: 'id',
+  token: 'token',
+  email: 'email',
+  expiresAt: 'expiresAt',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -138,7 +146,8 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  WaitListUser: 'WaitListUser'
+  WaitListUser: 'WaitListUser',
+  EmailVerificationToken: 'EmailVerificationToken'
 };
 
 /**
