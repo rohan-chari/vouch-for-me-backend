@@ -5,7 +5,7 @@ const { sendVerificationEmail } = require('../services/resendClient');
 const sendVerificationEmailHandler = async (req, res) => {
   const { email } = req.body;
 
-  const token = crypto.randomBytes(32).toString('hex');
+  const token = Math.floor(100000 + Math.random() * 900000).toString();
   const expiresAt = new Date(Date.now() + 1000 * 60 * 60);
 
   await prisma.emailVerificationToken.create({
@@ -13,6 +13,7 @@ const sendVerificationEmailHandler = async (req, res) => {
   });
 
   await sendVerificationEmail({ to: email, token });
+  res.status(200).json({ message:"Email Sent" });
 
 };
 
