@@ -22,3 +22,21 @@ exports.addUserToDb = async (req, res) => {
   }
 };
 
+exports.getUser = async (req, res) => {
+    const { email, uid } = req.query;
+  
+    if (!email || !uid) {
+      return res.status(400).json({ error: 'Missing Required fields.' });
+    }
+  
+    try {
+        const user = await prisma.user.findUnique({
+            where: { email: email, uid: uid },
+        });
+        res.status(201).json(user);
+    } catch (error) {
+        console.error('Error fetching user: ', error);
+        res.status(500).json({ error: 'Error fetching user.' });
+    }
+  };
+

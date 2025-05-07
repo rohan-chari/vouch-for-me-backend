@@ -4,5 +4,7 @@ const userController = require('../controllers/userController');
 
 // POST /api/waitlist
 router.post('/create-user', userController.addUserToDb);
+router.get('/get-user', userController.getUser);
+
 
 module.exports = router;
