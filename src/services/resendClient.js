@@ -3,7 +3,7 @@ const { Resend } = require('resend');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendVerificationEmail = async ({ to, token }) => {
-  const url = `https://vouchforme.org/verify-email?token=${token}`;
+  const url = `https://vouchforme.org/#/verify-email?token=${token}`;
 
   return resend.emails.send({
     from: 'VouchForMe <noreply@vouchforme.org>',

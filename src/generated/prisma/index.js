@@ -151,7 +151,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
+    "rootEnvPath": "../../../.env",
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../../prisma",
@@ -161,16 +161,17 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://doadmin:AVNS_0ZwFPlQvd3HqAtQFaYV@vouch-for-me-db-do-user-19194670-0.f.db.ondigitalocean.com:25060/defaultdb?sslmode=require"
+        "value": null
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel WaitListUser {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  createdAt DateTime @default(now())\n}\n\nmodel EmailVerificationToken {\n  id        String   @id @default(uuid())\n  token     String   @unique\n  email     String\n  expiresAt DateTime\n  createdAt DateTime @default(now())\n}\n",
-  "inlineSchemaHash": "3fdb090eef4362921a890568555a653a0f813de8c3f227c9f81fdbf7fcc6fdbf",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel WaitListUser {\n  id        Int      @id @default(autoincrement())\n  email     String   @unique\n  createdAt DateTime @default(now())\n}\n\nmodel EmailVerificationToken {\n  id        String   @id @default(uuid())\n  token     String   @unique\n  email     String\n  expiresAt DateTime\n  createdAt DateTime @default(now())\n}\n\n/**\n * 📌 Prisma Migration Workflow — Add New Models Later\n * 1️⃣ Update schema.prisma\n * - Add new model(s) or modify existing ones\n * 2️⃣ Create a migration:\n * npx prisma migrate dev --name meaningful_migration_name\n * 3️⃣ Deploy the migration (for production or remote DBs):\n * npx prisma migrate deploy\n * Optional:\n * - Use `npx prisma studio` to view/edit data visually\n * - Use `npx prisma generate` if using the client in a custom path\n */\n",
+  "inlineSchemaHash": "9db84b387c21012ed990d3d9d4fd76d839ec8c091bd985a26142393fcfdbba4e",
   "copyEngine": true
 }
 

@@ -18,9 +18,15 @@ const sendVerificationEmailHandler = async (req, res) => {
 };
 
 const verifyEmailHandler = async (req, res) => {
-  const { token } = req.query;
 
-  const record = await prisma.emailVerificationToken.findUnique({ where: { token } });
+  const { token } = req.query;
+  const record = await prisma.emailVerificationToken.findUnique({
+    where: {
+      token: token, 
+    },
+  });
+
+  console.log(record)
 
   if (!record || record.expiresAt < new Date()) {
     return res.status(400).json({ error: 'Invalid or expired token' });

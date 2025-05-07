@@ -31,3 +31,17 @@ npx prisma migrate reset
 
 =======================================================
 */
+
+/**
+ * 📌 Prisma Migration Workflow — Add New Models Later
+ * 1️⃣ Update schema.prisma
+ * - Add new model(s) or modify existing ones
+ * 2️⃣ Create a migration:
+ * npx prisma migrate dev --name meaningful_migration_name
+ * 3️⃣ Deploy the migration (for production or remote DBs):
+ * npx prisma migrate deploy
+ * Optional:
+ * - Use `npx prisma studio` to view/edit data visually
+ * - Use `npx prisma generate` if using the client in a custom path
+ */
+
