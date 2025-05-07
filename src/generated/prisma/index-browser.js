@@ -120,6 +120,16 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.UserScalarFieldEnum = {
+  id: 'id',
+  uid: 'uid',
+  email: 'email',
+  emailVerified: 'emailVerified',
+  firstName: 'firstName',
+  lastName: 'lastName',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.WaitListUserScalarFieldEnum = {
   id: 'id',
   email: 'email',
@@ -144,8 +154,14 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
+  User: 'User',
   WaitListUser: 'WaitListUser',
   EmailVerificationToken: 'EmailVerificationToken'
 };
