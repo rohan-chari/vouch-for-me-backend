@@ -46,7 +46,6 @@ exports.updateUser = async (req, res) => {
     email,
     emailVerified,
     firstName,
-    middleName,
     middleInitial,
     lastName
   } = req.body;
@@ -62,7 +61,6 @@ exports.updateUser = async (req, res) => {
         email: email?.toLowerCase(),
         emailVerified,
         firstName,
-        middleName,
         middleInitial,
         lastName
       }
