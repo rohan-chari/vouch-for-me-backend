@@ -127,6 +127,7 @@ exports.Prisma.UserScalarFieldEnum = {
   emailVerified: 'emailVerified',
   firstName: 'firstName',
   lastName: 'lastName',
+  middleInitial: 'middleInitial',
   createdAt: 'createdAt'
 };
 

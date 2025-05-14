@@ -38,5 +38,45 @@ exports.getUser = async (req, res) => {
         console.error('Error fetching user: ', error);
         res.status(500).json({ error: 'Error fetching user.' });
     }
-  };
+};
+
+exports.updateUser = async (req, res) => {
+  const {
+    uid,
+    email,
+    emailVerified,
+    firstName,
+    middleName,
+    middleInitial,
+    lastName
+  } = req.body;
+
+  if (!uid) {
+    return res.status(400).json({ error: 'Missing UID.' });
+  }
+
+  try {
+    const updatedUser = await prisma.user.update({
+      where: { uid },
+      data: {
+        email: email?.toLowerCase(),
+        emailVerified,
+        firstName,
+        middleName,
+        middleInitial,
+        lastName
+      }
+    });
+
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    if (error.code === 'P2025') {
+      return res.status(404).json({ error: 'User not found.' });
+    }
+
+    console.error('Error updating user:', error);
+    res.status(500).json({ error: 'Internal server error.' });
+  }
+};
+
 

@@ -14,7 +14,8 @@ model User {
   email          String   @unique
   emailVerified  Boolean  @default(false) 
   firstName      String? 
-  lastName       String?                   
+  lastName       String?
+  middleInitial  String?                   
   createdAt      DateTime @default(now())
 }
 

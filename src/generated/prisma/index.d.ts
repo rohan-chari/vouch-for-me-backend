@@ -1078,6 +1078,7 @@ export namespace Prisma {
     emailVerified: boolean | null
     firstName: string | null
     lastName: string | null
+    middleInitial: string | null
     createdAt: Date | null
   }
 
@@ -1088,6 +1089,7 @@ export namespace Prisma {
     emailVerified: boolean | null
     firstName: string | null
     lastName: string | null
+    middleInitial: string | null
     createdAt: Date | null
   }
 
@@ -1098,6 +1100,7 @@ export namespace Prisma {
     emailVerified: number
     firstName: number
     lastName: number
+    middleInitial: number
     createdAt: number
     _all: number
   }
@@ -1118,6 +1121,7 @@ export namespace Prisma {
     emailVerified?: true
     firstName?: true
     lastName?: true
+    middleInitial?: true
     createdAt?: true
   }
 
@@ -1128,6 +1132,7 @@ export namespace Prisma {
     emailVerified?: true
     firstName?: true
     lastName?: true
+    middleInitial?: true
     createdAt?: true
   }
 
@@ -1138,6 +1143,7 @@ export namespace Prisma {
     emailVerified?: true
     firstName?: true
     lastName?: true
+    middleInitial?: true
     createdAt?: true
     _all?: true
   }
@@ -1235,6 +1241,7 @@ export namespace Prisma {
     emailVerified: boolean
     firstName: string | null
     lastName: string | null
+    middleInitial: string | null
     createdAt: Date
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
@@ -1264,6 +1271,7 @@ export namespace Prisma {
     emailVerified?: boolean
     firstName?: boolean
     lastName?: boolean
+    middleInitial?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -1274,6 +1282,7 @@ export namespace Prisma {
     emailVerified?: boolean
     firstName?: boolean
     lastName?: boolean
+    middleInitial?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -1284,6 +1293,7 @@ export namespace Prisma {
     emailVerified?: boolean
     firstName?: boolean
     lastName?: boolean
+    middleInitial?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -1294,10 +1304,11 @@ export namespace Prisma {
     emailVerified?: boolean
     firstName?: boolean
     lastName?: boolean
+    middleInitial?: boolean
     createdAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "uid" | "email" | "emailVerified" | "firstName" | "lastName" | "createdAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "uid" | "email" | "emailVerified" | "firstName" | "lastName" | "middleInitial" | "createdAt", ExtArgs["result"]["user"]>
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -1309,6 +1320,7 @@ export namespace Prisma {
       emailVerified: boolean
       firstName: string | null
       lastName: string | null
+      middleInitial: string | null
       createdAt: Date
     }, ExtArgs["result"]["user"]>
     composites: {}
@@ -1739,6 +1751,7 @@ export namespace Prisma {
     readonly emailVerified: FieldRef<"User", 'Boolean'>
     readonly firstName: FieldRef<"User", 'String'>
     readonly lastName: FieldRef<"User", 'String'>
+    readonly middleInitial: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
   }
     
@@ -4125,6 +4138,7 @@ export namespace Prisma {
     emailVerified: 'emailVerified',
     firstName: 'firstName',
     lastName: 'lastName',
+    middleInitial: 'middleInitial',
     createdAt: 'createdAt'
   };
 
@@ -4256,6 +4270,7 @@ export namespace Prisma {
     emailVerified?: BoolFilter<"User"> | boolean
     firstName?: StringNullableFilter<"User"> | string | null
     lastName?: StringNullableFilter<"User"> | string | null
+    middleInitial?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
   }
 
@@ -4266,6 +4281,7 @@ export namespace Prisma {
     emailVerified?: SortOrder
     firstName?: SortOrderInput | SortOrder
     lastName?: SortOrderInput | SortOrder
+    middleInitial?: SortOrderInput | SortOrder
     createdAt?: SortOrder
   }
 
@@ -4279,6 +4295,7 @@ export namespace Prisma {
     emailVerified?: BoolFilter<"User"> | boolean
     firstName?: StringNullableFilter<"User"> | string | null
     lastName?: StringNullableFilter<"User"> | string | null
+    middleInitial?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
   }, "id" | "uid" | "email">
 
@@ -4289,6 +4306,7 @@ export namespace Prisma {
     emailVerified?: SortOrder
     firstName?: SortOrderInput | SortOrder
     lastName?: SortOrderInput | SortOrder
+    middleInitial?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
@@ -4307,6 +4325,7 @@ export namespace Prisma {
     emailVerified?: BoolWithAggregatesFilter<"User"> | boolean
     firstName?: StringNullableWithAggregatesFilter<"User"> | string | null
     lastName?: StringNullableWithAggregatesFilter<"User"> | string | null
+    middleInitial?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
@@ -4412,6 +4431,7 @@ export namespace Prisma {
     emailVerified?: boolean
     firstName?: string | null
     lastName?: string | null
+    middleInitial?: string | null
     createdAt?: Date | string
   }
 
@@ -4422,6 +4442,7 @@ export namespace Prisma {
     emailVerified?: boolean
     firstName?: string | null
     lastName?: string | null
+    middleInitial?: string | null
     createdAt?: Date | string
   }
 
@@ -4431,6 +4452,7 @@ export namespace Prisma {
     emailVerified?: BoolFieldUpdateOperationsInput | boolean
     firstName?: NullableStringFieldUpdateOperationsInput | string | null
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    middleInitial?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -4441,6 +4463,7 @@ export namespace Prisma {
     emailVerified?: BoolFieldUpdateOperationsInput | boolean
     firstName?: NullableStringFieldUpdateOperationsInput | string | null
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    middleInitial?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -4451,6 +4474,7 @@ export namespace Prisma {
     emailVerified?: boolean
     firstName?: string | null
     lastName?: string | null
+    middleInitial?: string | null
     createdAt?: Date | string
   }
 
@@ -4460,6 +4484,7 @@ export namespace Prisma {
     emailVerified?: BoolFieldUpdateOperationsInput | boolean
     firstName?: NullableStringFieldUpdateOperationsInput | string | null
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    middleInitial?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -4470,6 +4495,7 @@ export namespace Prisma {
     emailVerified?: BoolFieldUpdateOperationsInput | boolean
     firstName?: NullableStringFieldUpdateOperationsInput | string | null
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    middleInitial?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -4637,6 +4663,7 @@ export namespace Prisma {
     emailVerified?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrder
+    middleInitial?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -4651,6 +4678,7 @@ export namespace Prisma {
     emailVerified?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrder
+    middleInitial?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -4661,6 +4689,7 @@ export namespace Prisma {
     emailVerified?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrder
+    middleInitial?: SortOrder
     createdAt?: SortOrder
   }
 
