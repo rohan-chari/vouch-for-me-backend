@@ -128,6 +128,7 @@ exports.Prisma.UserScalarFieldEnum = {
   firstName: 'firstName',
   lastName: 'lastName',
   middleInitial: 'middleInitial',
+  userBio: 'userBio',
   profilePictureUrl: 'profilePictureUrl',
   createdAt: 'createdAt'
 };

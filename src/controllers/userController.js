@@ -48,8 +48,13 @@ exports.updateUser = async (req, res) => {
     firstName,
     middleInitial,
     lastName,
-    profilePictureUrl
+    profilePictureUrl,
+    userBio
   } = req.body;
+
+  if(userBio == ""){
+    userBio = null;
+  }
 
   if (!uid) {
     return res.status(400).json({ error: 'Missing UID.' });
@@ -64,7 +69,8 @@ exports.updateUser = async (req, res) => {
         firstName,
         middleInitial,
         lastName,
-        profilePictureUrl
+        profilePictureUrl,
+        userBio
       }
     });
 
