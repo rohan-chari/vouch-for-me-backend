@@ -9,14 +9,15 @@ datasource db {
 }
 
 model User {
-  id             Int      @id @default(autoincrement())
-  uid            String   @unique           
-  email          String   @unique
-  emailVerified  Boolean  @default(false) 
-  firstName      String? 
-  lastName       String?
-  middleInitial  String?                   
-  createdAt      DateTime @default(now())
+  id                Int      @id @default(autoincrement())
+  uid               String   @unique
+  email             String   @unique
+  emailVerified     Boolean  @default(false)
+  firstName         String?
+  lastName          String?
+  middleInitial     String?
+  profilePictureUrl String?
+  createdAt         DateTime @default(now())
 }
 
 model WaitListUser {

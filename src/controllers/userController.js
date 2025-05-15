@@ -47,7 +47,8 @@ exports.updateUser = async (req, res) => {
     emailVerified,
     firstName,
     middleInitial,
-    lastName
+    lastName,
+    profilePictureUrl
   } = req.body;
 
   if (!uid) {
@@ -62,7 +63,8 @@ exports.updateUser = async (req, res) => {
         emailVerified,
         firstName,
         middleInitial,
-        lastName
+        lastName,
+        profilePictureUrl
       }
     });
 
