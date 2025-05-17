@@ -1065,10 +1065,14 @@ export namespace Prisma {
 
   export type UserAvgAggregateOutputType = {
     id: number | null
+    experience: number | null
+    graduationYear: number | null
   }
 
   export type UserSumAggregateOutputType = {
     id: number | null
+    experience: number | null
+    graduationYear: number | null
   }
 
   export type UserMinAggregateOutputType = {
@@ -1081,6 +1085,15 @@ export namespace Prisma {
     middleInitial: string | null
     userBio: string | null
     otherGoals: string | null
+    employmentStatus: string | null
+    occupation: string | null
+    company: string | null
+    experience: number | null
+    institution: string | null
+    fieldOfStudy: string | null
+    educationLevel: string | null
+    graduationYear: number | null
+    desiredRole: string | null
     profilePictureUrl: string | null
     createdAt: Date | null
   }
@@ -1095,6 +1108,15 @@ export namespace Prisma {
     middleInitial: string | null
     userBio: string | null
     otherGoals: string | null
+    employmentStatus: string | null
+    occupation: string | null
+    company: string | null
+    experience: number | null
+    institution: string | null
+    fieldOfStudy: string | null
+    educationLevel: string | null
+    graduationYear: number | null
+    desiredRole: string | null
     profilePictureUrl: string | null
     createdAt: Date | null
   }
@@ -1110,6 +1132,17 @@ export namespace Prisma {
     userBio: number
     goals: number
     otherGoals: number
+    employmentStatus: number
+    occupation: number
+    company: number
+    experience: number
+    institution: number
+    fieldOfStudy: number
+    educationLevel: number
+    graduationYear: number
+    desiredRole: number
+    desiredIndustries: number
+    skills: number
     profilePictureUrl: number
     createdAt: number
     _all: number
@@ -1118,10 +1151,14 @@ export namespace Prisma {
 
   export type UserAvgAggregateInputType = {
     id?: true
+    experience?: true
+    graduationYear?: true
   }
 
   export type UserSumAggregateInputType = {
     id?: true
+    experience?: true
+    graduationYear?: true
   }
 
   export type UserMinAggregateInputType = {
@@ -1134,6 +1171,15 @@ export namespace Prisma {
     middleInitial?: true
     userBio?: true
     otherGoals?: true
+    employmentStatus?: true
+    occupation?: true
+    company?: true
+    experience?: true
+    institution?: true
+    fieldOfStudy?: true
+    educationLevel?: true
+    graduationYear?: true
+    desiredRole?: true
     profilePictureUrl?: true
     createdAt?: true
   }
@@ -1148,6 +1194,15 @@ export namespace Prisma {
     middleInitial?: true
     userBio?: true
     otherGoals?: true
+    employmentStatus?: true
+    occupation?: true
+    company?: true
+    experience?: true
+    institution?: true
+    fieldOfStudy?: true
+    educationLevel?: true
+    graduationYear?: true
+    desiredRole?: true
     profilePictureUrl?: true
     createdAt?: true
   }
@@ -1163,6 +1218,17 @@ export namespace Prisma {
     userBio?: true
     goals?: true
     otherGoals?: true
+    employmentStatus?: true
+    occupation?: true
+    company?: true
+    experience?: true
+    institution?: true
+    fieldOfStudy?: true
+    educationLevel?: true
+    graduationYear?: true
+    desiredRole?: true
+    desiredIndustries?: true
+    skills?: true
     profilePictureUrl?: true
     createdAt?: true
     _all?: true
@@ -1265,6 +1331,17 @@ export namespace Prisma {
     userBio: string | null
     goals: string[]
     otherGoals: string | null
+    employmentStatus: string
+    occupation: string | null
+    company: string | null
+    experience: number | null
+    institution: string | null
+    fieldOfStudy: string | null
+    educationLevel: string | null
+    graduationYear: number | null
+    desiredRole: string | null
+    desiredIndustries: string[]
+    skills: string[]
     profilePictureUrl: string | null
     createdAt: Date
     _count: UserCountAggregateOutputType | null
@@ -1299,6 +1376,17 @@ export namespace Prisma {
     userBio?: boolean
     goals?: boolean
     otherGoals?: boolean
+    employmentStatus?: boolean
+    occupation?: boolean
+    company?: boolean
+    experience?: boolean
+    institution?: boolean
+    fieldOfStudy?: boolean
+    educationLevel?: boolean
+    graduationYear?: boolean
+    desiredRole?: boolean
+    desiredIndustries?: boolean
+    skills?: boolean
     profilePictureUrl?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1314,6 +1402,17 @@ export namespace Prisma {
     userBio?: boolean
     goals?: boolean
     otherGoals?: boolean
+    employmentStatus?: boolean
+    occupation?: boolean
+    company?: boolean
+    experience?: boolean
+    institution?: boolean
+    fieldOfStudy?: boolean
+    educationLevel?: boolean
+    graduationYear?: boolean
+    desiredRole?: boolean
+    desiredIndustries?: boolean
+    skills?: boolean
     profilePictureUrl?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1329,6 +1428,17 @@ export namespace Prisma {
     userBio?: boolean
     goals?: boolean
     otherGoals?: boolean
+    employmentStatus?: boolean
+    occupation?: boolean
+    company?: boolean
+    experience?: boolean
+    institution?: boolean
+    fieldOfStudy?: boolean
+    educationLevel?: boolean
+    graduationYear?: boolean
+    desiredRole?: boolean
+    desiredIndustries?: boolean
+    skills?: boolean
     profilePictureUrl?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1344,11 +1454,22 @@ export namespace Prisma {
     userBio?: boolean
     goals?: boolean
     otherGoals?: boolean
+    employmentStatus?: boolean
+    occupation?: boolean
+    company?: boolean
+    experience?: boolean
+    institution?: boolean
+    fieldOfStudy?: boolean
+    educationLevel?: boolean
+    graduationYear?: boolean
+    desiredRole?: boolean
+    desiredIndustries?: boolean
+    skills?: boolean
     profilePictureUrl?: boolean
     createdAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "uid" | "email" | "emailVerified" | "firstName" | "lastName" | "middleInitial" | "userBio" | "goals" | "otherGoals" | "profilePictureUrl" | "createdAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "uid" | "email" | "emailVerified" | "firstName" | "lastName" | "middleInitial" | "userBio" | "goals" | "otherGoals" | "employmentStatus" | "occupation" | "company" | "experience" | "institution" | "fieldOfStudy" | "educationLevel" | "graduationYear" | "desiredRole" | "desiredIndustries" | "skills" | "profilePictureUrl" | "createdAt", ExtArgs["result"]["user"]>
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -1364,6 +1485,17 @@ export namespace Prisma {
       userBio: string | null
       goals: string[]
       otherGoals: string | null
+      employmentStatus: string
+      occupation: string | null
+      company: string | null
+      experience: number | null
+      institution: string | null
+      fieldOfStudy: string | null
+      educationLevel: string | null
+      graduationYear: number | null
+      desiredRole: string | null
+      desiredIndustries: string[]
+      skills: string[]
       profilePictureUrl: string | null
       createdAt: Date
     }, ExtArgs["result"]["user"]>
@@ -1799,6 +1931,17 @@ export namespace Prisma {
     readonly userBio: FieldRef<"User", 'String'>
     readonly goals: FieldRef<"User", 'String[]'>
     readonly otherGoals: FieldRef<"User", 'String'>
+    readonly employmentStatus: FieldRef<"User", 'String'>
+    readonly occupation: FieldRef<"User", 'String'>
+    readonly company: FieldRef<"User", 'String'>
+    readonly experience: FieldRef<"User", 'Int'>
+    readonly institution: FieldRef<"User", 'String'>
+    readonly fieldOfStudy: FieldRef<"User", 'String'>
+    readonly educationLevel: FieldRef<"User", 'String'>
+    readonly graduationYear: FieldRef<"User", 'Int'>
+    readonly desiredRole: FieldRef<"User", 'String'>
+    readonly desiredIndustries: FieldRef<"User", 'String[]'>
+    readonly skills: FieldRef<"User", 'String[]'>
     readonly profilePictureUrl: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
   }
@@ -4190,6 +4333,17 @@ export namespace Prisma {
     userBio: 'userBio',
     goals: 'goals',
     otherGoals: 'otherGoals',
+    employmentStatus: 'employmentStatus',
+    occupation: 'occupation',
+    company: 'company',
+    experience: 'experience',
+    institution: 'institution',
+    fieldOfStudy: 'fieldOfStudy',
+    educationLevel: 'educationLevel',
+    graduationYear: 'graduationYear',
+    desiredRole: 'desiredRole',
+    desiredIndustries: 'desiredIndustries',
+    skills: 'skills',
     profilePictureUrl: 'profilePictureUrl',
     createdAt: 'createdAt'
   };
@@ -4326,6 +4480,17 @@ export namespace Prisma {
     userBio?: StringNullableFilter<"User"> | string | null
     goals?: StringNullableListFilter<"User">
     otherGoals?: StringNullableFilter<"User"> | string | null
+    employmentStatus?: StringFilter<"User"> | string
+    occupation?: StringNullableFilter<"User"> | string | null
+    company?: StringNullableFilter<"User"> | string | null
+    experience?: IntNullableFilter<"User"> | number | null
+    institution?: StringNullableFilter<"User"> | string | null
+    fieldOfStudy?: StringNullableFilter<"User"> | string | null
+    educationLevel?: StringNullableFilter<"User"> | string | null
+    graduationYear?: IntNullableFilter<"User"> | number | null
+    desiredRole?: StringNullableFilter<"User"> | string | null
+    desiredIndustries?: StringNullableListFilter<"User">
+    skills?: StringNullableListFilter<"User">
     profilePictureUrl?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
   }
@@ -4341,6 +4506,17 @@ export namespace Prisma {
     userBio?: SortOrderInput | SortOrder
     goals?: SortOrder
     otherGoals?: SortOrderInput | SortOrder
+    employmentStatus?: SortOrder
+    occupation?: SortOrderInput | SortOrder
+    company?: SortOrderInput | SortOrder
+    experience?: SortOrderInput | SortOrder
+    institution?: SortOrderInput | SortOrder
+    fieldOfStudy?: SortOrderInput | SortOrder
+    educationLevel?: SortOrderInput | SortOrder
+    graduationYear?: SortOrderInput | SortOrder
+    desiredRole?: SortOrderInput | SortOrder
+    desiredIndustries?: SortOrder
+    skills?: SortOrder
     profilePictureUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
   }
@@ -4359,6 +4535,17 @@ export namespace Prisma {
     userBio?: StringNullableFilter<"User"> | string | null
     goals?: StringNullableListFilter<"User">
     otherGoals?: StringNullableFilter<"User"> | string | null
+    employmentStatus?: StringFilter<"User"> | string
+    occupation?: StringNullableFilter<"User"> | string | null
+    company?: StringNullableFilter<"User"> | string | null
+    experience?: IntNullableFilter<"User"> | number | null
+    institution?: StringNullableFilter<"User"> | string | null
+    fieldOfStudy?: StringNullableFilter<"User"> | string | null
+    educationLevel?: StringNullableFilter<"User"> | string | null
+    graduationYear?: IntNullableFilter<"User"> | number | null
+    desiredRole?: StringNullableFilter<"User"> | string | null
+    desiredIndustries?: StringNullableListFilter<"User">
+    skills?: StringNullableListFilter<"User">
     profilePictureUrl?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
   }, "id" | "uid" | "email">
@@ -4374,6 +4561,17 @@ export namespace Prisma {
     userBio?: SortOrderInput | SortOrder
     goals?: SortOrder
     otherGoals?: SortOrderInput | SortOrder
+    employmentStatus?: SortOrder
+    occupation?: SortOrderInput | SortOrder
+    company?: SortOrderInput | SortOrder
+    experience?: SortOrderInput | SortOrder
+    institution?: SortOrderInput | SortOrder
+    fieldOfStudy?: SortOrderInput | SortOrder
+    educationLevel?: SortOrderInput | SortOrder
+    graduationYear?: SortOrderInput | SortOrder
+    desiredRole?: SortOrderInput | SortOrder
+    desiredIndustries?: SortOrder
+    skills?: SortOrder
     profilePictureUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
@@ -4397,6 +4595,17 @@ export namespace Prisma {
     userBio?: StringNullableWithAggregatesFilter<"User"> | string | null
     goals?: StringNullableListFilter<"User">
     otherGoals?: StringNullableWithAggregatesFilter<"User"> | string | null
+    employmentStatus?: StringWithAggregatesFilter<"User"> | string
+    occupation?: StringNullableWithAggregatesFilter<"User"> | string | null
+    company?: StringNullableWithAggregatesFilter<"User"> | string | null
+    experience?: IntNullableWithAggregatesFilter<"User"> | number | null
+    institution?: StringNullableWithAggregatesFilter<"User"> | string | null
+    fieldOfStudy?: StringNullableWithAggregatesFilter<"User"> | string | null
+    educationLevel?: StringNullableWithAggregatesFilter<"User"> | string | null
+    graduationYear?: IntNullableWithAggregatesFilter<"User"> | number | null
+    desiredRole?: StringNullableWithAggregatesFilter<"User"> | string | null
+    desiredIndustries?: StringNullableListFilter<"User">
+    skills?: StringNullableListFilter<"User">
     profilePictureUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
@@ -4507,6 +4716,17 @@ export namespace Prisma {
     userBio?: string | null
     goals?: UserCreategoalsInput | string[]
     otherGoals?: string | null
+    employmentStatus?: string
+    occupation?: string | null
+    company?: string | null
+    experience?: number | null
+    institution?: string | null
+    fieldOfStudy?: string | null
+    educationLevel?: string | null
+    graduationYear?: number | null
+    desiredRole?: string | null
+    desiredIndustries?: UserCreatedesiredIndustriesInput | string[]
+    skills?: UserCreateskillsInput | string[]
     profilePictureUrl?: string | null
     createdAt?: Date | string
   }
@@ -4522,6 +4742,17 @@ export namespace Prisma {
     userBio?: string | null
     goals?: UserCreategoalsInput | string[]
     otherGoals?: string | null
+    employmentStatus?: string
+    occupation?: string | null
+    company?: string | null
+    experience?: number | null
+    institution?: string | null
+    fieldOfStudy?: string | null
+    educationLevel?: string | null
+    graduationYear?: number | null
+    desiredRole?: string | null
+    desiredIndustries?: UserCreatedesiredIndustriesInput | string[]
+    skills?: UserCreateskillsInput | string[]
     profilePictureUrl?: string | null
     createdAt?: Date | string
   }
@@ -4536,6 +4767,17 @@ export namespace Prisma {
     userBio?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: UserUpdategoalsInput | string[]
     otherGoals?: NullableStringFieldUpdateOperationsInput | string | null
+    employmentStatus?: StringFieldUpdateOperationsInput | string
+    occupation?: NullableStringFieldUpdateOperationsInput | string | null
+    company?: NullableStringFieldUpdateOperationsInput | string | null
+    experience?: NullableIntFieldUpdateOperationsInput | number | null
+    institution?: NullableStringFieldUpdateOperationsInput | string | null
+    fieldOfStudy?: NullableStringFieldUpdateOperationsInput | string | null
+    educationLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    graduationYear?: NullableIntFieldUpdateOperationsInput | number | null
+    desiredRole?: NullableStringFieldUpdateOperationsInput | string | null
+    desiredIndustries?: UserUpdatedesiredIndustriesInput | string[]
+    skills?: UserUpdateskillsInput | string[]
     profilePictureUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4551,6 +4793,17 @@ export namespace Prisma {
     userBio?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: UserUpdategoalsInput | string[]
     otherGoals?: NullableStringFieldUpdateOperationsInput | string | null
+    employmentStatus?: StringFieldUpdateOperationsInput | string
+    occupation?: NullableStringFieldUpdateOperationsInput | string | null
+    company?: NullableStringFieldUpdateOperationsInput | string | null
+    experience?: NullableIntFieldUpdateOperationsInput | number | null
+    institution?: NullableStringFieldUpdateOperationsInput | string | null
+    fieldOfStudy?: NullableStringFieldUpdateOperationsInput | string | null
+    educationLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    graduationYear?: NullableIntFieldUpdateOperationsInput | number | null
+    desiredRole?: NullableStringFieldUpdateOperationsInput | string | null
+    desiredIndustries?: UserUpdatedesiredIndustriesInput | string[]
+    skills?: UserUpdateskillsInput | string[]
     profilePictureUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4566,6 +4819,17 @@ export namespace Prisma {
     userBio?: string | null
     goals?: UserCreategoalsInput | string[]
     otherGoals?: string | null
+    employmentStatus?: string
+    occupation?: string | null
+    company?: string | null
+    experience?: number | null
+    institution?: string | null
+    fieldOfStudy?: string | null
+    educationLevel?: string | null
+    graduationYear?: number | null
+    desiredRole?: string | null
+    desiredIndustries?: UserCreatedesiredIndustriesInput | string[]
+    skills?: UserCreateskillsInput | string[]
     profilePictureUrl?: string | null
     createdAt?: Date | string
   }
@@ -4580,6 +4844,17 @@ export namespace Prisma {
     userBio?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: UserUpdategoalsInput | string[]
     otherGoals?: NullableStringFieldUpdateOperationsInput | string | null
+    employmentStatus?: StringFieldUpdateOperationsInput | string
+    occupation?: NullableStringFieldUpdateOperationsInput | string | null
+    company?: NullableStringFieldUpdateOperationsInput | string | null
+    experience?: NullableIntFieldUpdateOperationsInput | number | null
+    institution?: NullableStringFieldUpdateOperationsInput | string | null
+    fieldOfStudy?: NullableStringFieldUpdateOperationsInput | string | null
+    educationLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    graduationYear?: NullableIntFieldUpdateOperationsInput | number | null
+    desiredRole?: NullableStringFieldUpdateOperationsInput | string | null
+    desiredIndustries?: UserUpdatedesiredIndustriesInput | string[]
+    skills?: UserUpdateskillsInput | string[]
     profilePictureUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4595,6 +4870,17 @@ export namespace Prisma {
     userBio?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: UserUpdategoalsInput | string[]
     otherGoals?: NullableStringFieldUpdateOperationsInput | string | null
+    employmentStatus?: StringFieldUpdateOperationsInput | string
+    occupation?: NullableStringFieldUpdateOperationsInput | string | null
+    company?: NullableStringFieldUpdateOperationsInput | string | null
+    experience?: NullableIntFieldUpdateOperationsInput | number | null
+    institution?: NullableStringFieldUpdateOperationsInput | string | null
+    fieldOfStudy?: NullableStringFieldUpdateOperationsInput | string | null
+    educationLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    graduationYear?: NullableIntFieldUpdateOperationsInput | number | null
+    desiredRole?: NullableStringFieldUpdateOperationsInput | string | null
+    desiredIndustries?: UserUpdatedesiredIndustriesInput | string[]
+    skills?: UserUpdateskillsInput | string[]
     profilePictureUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4748,6 +5034,17 @@ export namespace Prisma {
     isEmpty?: boolean
   }
 
+  export type IntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -4775,12 +5072,25 @@ export namespace Prisma {
     userBio?: SortOrder
     goals?: SortOrder
     otherGoals?: SortOrder
+    employmentStatus?: SortOrder
+    occupation?: SortOrder
+    company?: SortOrder
+    experience?: SortOrder
+    institution?: SortOrder
+    fieldOfStudy?: SortOrder
+    educationLevel?: SortOrder
+    graduationYear?: SortOrder
+    desiredRole?: SortOrder
+    desiredIndustries?: SortOrder
+    skills?: SortOrder
     profilePictureUrl?: SortOrder
     createdAt?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
     id?: SortOrder
+    experience?: SortOrder
+    graduationYear?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -4793,6 +5103,15 @@ export namespace Prisma {
     middleInitial?: SortOrder
     userBio?: SortOrder
     otherGoals?: SortOrder
+    employmentStatus?: SortOrder
+    occupation?: SortOrder
+    company?: SortOrder
+    experience?: SortOrder
+    institution?: SortOrder
+    fieldOfStudy?: SortOrder
+    educationLevel?: SortOrder
+    graduationYear?: SortOrder
+    desiredRole?: SortOrder
     profilePictureUrl?: SortOrder
     createdAt?: SortOrder
   }
@@ -4807,12 +5126,23 @@ export namespace Prisma {
     middleInitial?: SortOrder
     userBio?: SortOrder
     otherGoals?: SortOrder
+    employmentStatus?: SortOrder
+    occupation?: SortOrder
+    company?: SortOrder
+    experience?: SortOrder
+    institution?: SortOrder
+    fieldOfStudy?: SortOrder
+    educationLevel?: SortOrder
+    graduationYear?: SortOrder
+    desiredRole?: SortOrder
     profilePictureUrl?: SortOrder
     createdAt?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
     id?: SortOrder
+    experience?: SortOrder
+    graduationYear?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -4873,6 +5203,22 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedStringNullableFilter<$PrismaModel>
     _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
   }
 
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -4943,6 +5289,14 @@ export namespace Prisma {
     set: string[]
   }
 
+  export type UserCreatedesiredIndustriesInput = {
+    set: string[]
+  }
+
+  export type UserCreateskillsInput = {
+    set: string[]
+  }
+
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
@@ -4956,6 +5310,24 @@ export namespace Prisma {
   }
 
   export type UserUpdategoalsInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type NullableIntFieldUpdateOperationsInput = {
+    set?: number | null
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type UserUpdatedesiredIndustriesInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type UserUpdateskillsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -5014,6 +5386,17 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeFilter<$PrismaModel = never> = {
@@ -5096,7 +5479,7 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type NestedIntNullableFilter<$PrismaModel = never> = {
+  export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
     notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -5104,7 +5487,23 @@ export namespace Prisma {
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
+  export type NestedFloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {

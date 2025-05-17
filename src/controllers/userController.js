@@ -51,7 +51,18 @@ exports.updateUser = async (req, res) => {
     profilePictureUrl,
     userBio,
     goals,
-    otherGoals
+    otherGoals,
+    employmentStatus,
+    occupation,
+    company,
+    experience,
+    institution,
+    fieldOfStudy,
+    educationLevel,
+    graduationYear,
+    desiredRole,
+    desiredIndustries,
+    skills
   } = req.body;
 
   const sanitizedUserBio = userBio === "" ? null : userBio;
@@ -72,7 +83,18 @@ exports.updateUser = async (req, res) => {
         profilePictureUrl,
         userBio: sanitizedUserBio,
         goals,
-        otherGoals
+        otherGoals,
+        employmentStatus,
+        occupation,
+        company,
+        experience,
+        institution,
+        fieldOfStudy,
+        educationLevel,
+        graduationYear,
+        desiredRole,
+        desiredIndustries,
+        skills
       }
     });
 

@@ -131,6 +131,17 @@ exports.Prisma.UserScalarFieldEnum = {
   userBio: 'userBio',
   goals: 'goals',
   otherGoals: 'otherGoals',
+  employmentStatus: 'employmentStatus',
+  occupation: 'occupation',
+  company: 'company',
+  experience: 'experience',
+  institution: 'institution',
+  fieldOfStudy: 'fieldOfStudy',
+  educationLevel: 'educationLevel',
+  graduationYear: 'graduationYear',
+  desiredRole: 'desiredRole',
+  desiredIndustries: 'desiredIndustries',
+  skills: 'skills',
   profilePictureUrl: 'profilePictureUrl',
   createdAt: 'createdAt'
 };
