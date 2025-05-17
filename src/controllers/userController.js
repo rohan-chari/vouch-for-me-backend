@@ -49,7 +49,9 @@ exports.updateUser = async (req, res) => {
     middleInitial,
     lastName,
     profilePictureUrl,
-    userBio
+    userBio,
+    goals,
+    otherGoals
   } = req.body;
 
   const sanitizedUserBio = userBio === "" ? null : userBio;
@@ -68,7 +70,9 @@ exports.updateUser = async (req, res) => {
         middleInitial,
         lastName,
         profilePictureUrl,
-        userBio: sanitizedUserBio
+        userBio: sanitizedUserBio,
+        goals,
+        otherGoals
       }
     });
 

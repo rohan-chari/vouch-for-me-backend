@@ -129,6 +129,8 @@ exports.Prisma.UserScalarFieldEnum = {
   lastName: 'lastName',
   middleInitial: 'middleInitial',
   userBio: 'userBio',
+  goals: 'goals',
+  otherGoals: 'otherGoals',
   profilePictureUrl: 'profilePictureUrl',
   createdAt: 'createdAt'
 };
