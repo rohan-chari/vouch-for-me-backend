@@ -9,17 +9,17 @@ datasource db {
 }
 
 model User {
-  id               Int      @id @default(autoincrement())
-  uid              String   @unique
-  email            String   @unique
-  emailVerified    Boolean  @default(false)
+  id               Int        @id @default(autoincrement())
+  uid              String     @unique
+  email            String     @unique
+  emailVerified    Boolean    @default(false)
   firstName        String?
   lastName         String?
   middleInitial    String?
   userBio          String?
-  goals            String[] @default([])
+  goals            String[]   @default([])
   otherGoals       String?
-  employmentStatus String   @default("")
+  employmentStatus String     @default("")
 
   // Professional fields
   occupation String?
@@ -39,7 +39,8 @@ model User {
   // Common fields
   skills            String[]
   profilePictureUrl String?
-  createdAt         DateTime @default(now())
+  createdAt         DateTime    @default(now())
+  templates         Template[]
 }
 
 model WaitListUser {
@@ -54,4 +55,29 @@ model EmailVerificationToken {
   email     String
   expiresAt DateTime
   createdAt DateTime @default(now())
+}
+
+model Template {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Basic Info
+  name        String
+  category    String
+  description String?
+
+  // Email Content
+  emailSubject String
+  emailBody    String
+
+  // Questions
+  questions Json[]
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [uid])
+
+  @@unique([name, userId])
+  @@index([userId])
 }

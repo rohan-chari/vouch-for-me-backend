@@ -160,6 +160,19 @@ exports.Prisma.EmailVerificationTokenScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.TemplateScalarFieldEnum = {
+  id: 'id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  name: 'name',
+  category: 'category',
+  description: 'description',
+  emailSubject: 'emailSubject',
+  emailBody: 'emailBody',
+  questions: 'questions',
+  userId: 'userId'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -179,7 +192,8 @@ exports.Prisma.NullsOrder = {
 exports.Prisma.ModelName = {
   User: 'User',
   WaitListUser: 'WaitListUser',
-  EmailVerificationToken: 'EmailVerificationToken'
+  EmailVerificationToken: 'EmailVerificationToken',
+  Template: 'Template'
 };
 
 /**
