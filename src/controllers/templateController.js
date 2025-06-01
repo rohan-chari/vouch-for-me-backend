@@ -21,14 +21,13 @@ const createTemplate = async (req, res) => {
     }
 };
 
-// Get all templates for a user
 const getUserTemplates = async (req, res) => {
     try {
-        const { userId } = req.query;
+        const { id } = req.params;
 
         const templates = await prisma.template.findMany({
             where: {
-                userId
+                userId: id
             }
         });
 
@@ -38,28 +37,6 @@ const getUserTemplates = async (req, res) => {
     }
 };
 
-// Get a single template by ID
-const getTemplateById = async (req, res) => {
-    try {
-        const { id } = req.params;
-        const { userId } = req.query;
-
-        const template = await prisma.template.findFirst({
-            where: {
-                id: parseInt(id),
-                userId
-            }
-        });
-
-        if (!template) {
-            return res.status(404).json({ error: 'Template not found' });
-        }
-
-        res.json(template);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-};
 
 // Update a template
 const updateTemplate = async (req, res) => {
@@ -119,7 +96,6 @@ const deleteTemplate = async (req, res) => {
 module.exports = {
     createTemplate,
     getUserTemplates,
-    getTemplateById,
     updateTemplate,
     deleteTemplate
 }; 
